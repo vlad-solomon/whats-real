@@ -1,0 +1,15 @@
+:root{
+    font-size: 16px;
+    font-family: "Helvetica Light";
+    color: var(--accent);
+}
+
+.page-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    // background-color: rgba(255,0,0,0.2);
+}
+
+::selection{
+    background-color: rgba(0,0,0,0.1) 
+}

@@ -1,0 +1,225 @@
+@import "1-tools/variables.css";
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("/assets/fonts/HelveticaLTStd-Bold.otf");
+}
+@font-face {
+  font-family: "Helvetica Light";
+  src: url("/assets/fonts/HelveticaLTStd-Light.otf");
+}
+:root {
+  font-size: 16px;
+  font-family: "Helvetica Light";
+  color: var(--accent);
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  color: var(--accent);
+  background-color: var(--alternate);
+  font-family: "Helvetica Bold";
+  font-size: 0.875rem;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  padding: 0 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button--search {
+  cursor: auto;
+  position: relative;
+  margin-right: 22px;
+}
+.button--search input[type=text] {
+  margin-left: -25px;
+  padding: 0 15px 0 25px;
+  left: 0;
+  border: none;
+  font-family: "Helvetica Bold";
+  height: 100%;
+  width: 100%;
+  outline: none;
+}
+.button--search input[type=text]::placeholder {
+  color: var(--accent);
+}
+
+.card, .not-found {
+  display: none;
+  position: relative;
+  height: 300px;
+  width: 386px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent);
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.card__background {
+  height: 100%;
+  width: 100%;
+}
+.card__title {
+  left: 15px;
+  bottom: 15px;
+  font-family: "Helvetica Bold";
+  font-size: 3rem;
+  position: absolute;
+  width: 80%;
+  color: var(--alternate);
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.card::before, .not-found::before {
+  content: url("/assets/img/gradient.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+}
+.card:hover, .not-found:hover {
+  transform: translateY(-5px);
+}
+
+.visible {
+  display: block;
+}
+
+.hero {
+  margin-bottom: 40px;
+  display: flex;
+}
+.hero__logo {
+  margin: 45px 0;
+}
+.hero__column {
+  width: 50%;
+  box-sizing: border-box;
+}
+.hero__column:first-child {
+  padding-right: 5%;
+  margin-right: 22px;
+}
+.hero__heading {
+  font-family: "Helvetica Bold";
+  font-size: 3rem;
+  margin-bottom: 35px;
+}
+.hero__blurb {
+  font-size: 1.125rem;
+  line-height: 165%;
+  opacity: 0.9;
+}
+.hero__placeholder {
+  height: 315px;
+  width: 100%;
+  border-radius: 5px;
+}
+.hero__placeholder img {
+  height: 100%;
+  width: 100%;
+}
+
+.cards__input {
+  display: flex;
+  margin-bottom: 40px;
+}
+.cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 85px;
+  min-height: 600px;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--accent);
+  padding: 45px 0;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+.footer__inner * {
+  display: block;
+  color: var(--alternate);
+  text-decoration: none;
+}
+.footer__group:not(:last-child):not(:first-child) {
+  text-align: center;
+}
+.footer__group:last-child {
+  text-align: right;
+}
+.footer__group *:not(:last-child) {
+  margin-bottom: 8px;
+}
+.footer__group a {
+  font-family: "Helvetica Bold";
+}

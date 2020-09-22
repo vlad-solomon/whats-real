@@ -1,0 +1,44 @@
+.card{
+    display: none;
+    position: relative;
+    height: 300px;
+    width: 386px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    background-color: var(--accent);
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    &__background{
+        height: 100%;
+        width: 100%;
+    }
+    &__title{
+        left: 15px;
+        bottom: 15px;
+        font-family: "Helvetica Bold";
+        font-size: 3rem;
+        position: absolute;
+        width: 80%;
+        color: var(--alternate);
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    }
+    &::before{
+        content: url("/assets/img/gradient.png");
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+    }
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+.visible{
+    display: block;
+}
+
+.not-found{
+    @extend .card;
+}

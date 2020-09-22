@@ -1,0 +1,13 @@
+.cards{
+    &__input{
+        display: flex;
+        margin-bottom: 40px;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-bottom: 85px;
+        min-height: 600px;
+    }
+}

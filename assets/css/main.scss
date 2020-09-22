@@ -1,0 +1,17 @@
+// 1-TOOLS
+
+@import "1-tools/reset.scss";
+@import "1-tools/fonts.scss";
+@import "1-tools/variables.css";
+@import "1-tools/global.scss";
+
+// 2-BASICS
+
+@import "2-basics/inputs.scss";
+@import "2-basics/card.scss";
+
+// 3-LAYOUTS
+
+@import "3-layouts/hero.scss";
+@import "3-layouts/cards.scss";
+@import "3-layouts/footer.scss";
