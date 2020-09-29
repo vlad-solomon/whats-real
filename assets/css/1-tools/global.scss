@@ -7,7 +7,17 @@
 .page-content{
     max-width: 1200px;
     margin: 0 auto;
-    // background-color: rgba(255,0,0,0.2);
+}
+
+.fade-in{
+    transition: 1s;
+    opacity: 1;
+}
+
+.fade-out{
+    transition: 1s;
+    opacity: 0;
+    pointer-events: none;
 }
 
 ::selection{

@@ -1,0 +1,98 @@
+title = "Steve Jobs"
+
+summary = "Steve Jobs takes us behind the scenes of the digital revolution, to paint a portrait of the man at its epicenter. The story unfolds backstage at three iconic product launches, ending in 1998 with the unveiling of the iMac."
+
+rating = "7.2"
+
+directors = ["Danny Boyle"]
+
+writers = ["Aaron Sorkin","Walter Isaacson"]
+
+actors = [
+  {
+    "name": "Michael Fassbender",
+    "role": "Steve Jobs"
+  },
+  {
+    "name": "Kate Winslet",
+    "role": "Joanna Hoffman"
+  },
+  {
+    "name": "Seth Rogen",
+    "role": "Steve \"Woz\" Wozniak"
+  },
+  {
+    "name": "Jeff Daniels",
+    "role": "John Sculley"
+  },
+  {
+    "name": "Michael Stuhlbarg",
+    "role": "Andy Hertzfeld"
+  },
+  {
+    "name": "Katherine Waterson",
+    "role": "Chrisann Brennan"
+  },
+  {
+    "name": "Perla Haney-Jardine",
+    "role": "Lisa Brennan-Jobs"
+  }
+]
+
+scenes = [
+  {
+    "name": "Did the opening scene where the Macintosh won't say \"hello\" really happen?",
+    "description": "No. In the movie's opening scene, we see Steve Jobs (Michael Fassbender) threaten Macintosh designer Andy Hertzfeld (Michael Stuhlbarg) over a glitch that is preventing the Macintosh from saying \"hello\" in its robotic voice. It is January 24, 1984, the day of the Macintosh launch event, and there is only 40 minutes left until Jobs is going to unveil the machine. He tells Hertzfeld that he will announce his failure from the stage if he doesn't get it fixed. The Steve Jobs true story reveals that nothing close to this scene happened on the day of the actual event. What unfolds in the movie is pure fiction."
+  },
+  {
+    "name": "Did Joanna Hoffman only discover that the Mac was a closed system on the day of the launch?",
+    "description": "No. In the Steve Jobs movie, Joanna Hoffman (Kate Winslet) is shocked to learn that the Macintosh is a closed system, and that specific tools are needed to open the case. The real Joanna Hoffman and the rest of the Macintosh team were aware of this well before its unveiling."
+  },
+  {
+    "name": "Did Lisa really show up at the Mac launch event and connect with her dad by drawing with MacPaint backstage?",
+    "description": "No. Unfortunately, this endearing moment never actually happened. Jobs, who had originally denied the paternity of his daughter Lisa Brennan, never decided to give Lisa's mother Chrisann more money because of a connection he made with his five-year-old daughter as he watched her use MacPaint backstage."
+  },
+  {
+    "name": "Did Mike Markkula really introduce the Macintosh \"1984\" ad?",
+    "description": "No. Steve Jobs introduced the George Orwell-inspired ad himself. Apple's \"1984\" commercial went on to be regarded by many as one of the greatest ads in history."
+  },
+  {
+    "name": "Did Apple really sue Steve Jobs at the time of his unveiling of NeXT's \"black box\" computer?",
+    "description": "No. In researching the true story behind the Steve Jobs movie, we discovered that Apple actually sued Steve Jobs back in 1985, when he left the company and took five Apple employees with him to start NeXT. To heighten the drama, the Steve Jobs movie pushes the lawsuit up to just before the October 12, 1988 launch of NeXT's \"black box\" computer."
+  },
+  {
+    "name": "Was Steve Jobs fired because he didn't agree with the reorganization of Apple?",
+    "description": "Yes. In May 1985, Sculley, encouraged by Arthur Rock, decided to reorganize Apple, and proposed a plan to the board that would remove Jobs from the Macintosh group and put him in charge of \"New Product Development.\" This move would effectively render Jobs powerless within Apple. In response, then Jobs developed a plan to get rid of Sculley and take over Apple. However, after the plan was leaked and Jobs confronted, he said that he would leave Apple. The Board declined his resignation and asked him to reconsider. Sculley also told Jobs that he had all of the votes needed to go ahead with the reorganization. A few months later, on September 17, 1985, Jobs turned in a letter of resignation to the Apple Board. Five additional senior Apple employees also resigned and joined Jobs in his new venture, NeXT."
+  },
+  {
+    "name": "Did Jobs really have a devious master plan of creating a NeXT operating system that Apple would have to buy?",
+    "description": "No. Even though the NeXT operating system did result in Steve Jobs ending up back at Apple, he most likely did not envision this would happen, and it certainly wasn't part of a master plan that he revealed to Joanna Hoffman backstage in 1988."
+  },
+  {
+    "name": "Did Steve Jobs and Apple really \"win\" after seeing sales forecasts for the iMac?",
+    "description": "No. In the movie, Joanna Hoffman (Kate Winslet) tells Steve Jobs (Michael Fassbender), \"It's over, you win,\" after seeing positive sales forecasts for the iMac. The machine did help to stop Apple from bleeding as much money, but it wasn't what turned the corner for the company. Apple didn't start to prosper again until the early 2000s, following the unexpected success of the iPod, a device that is foreshadowed in the movie."
+  },
+  {
+    "name": "Did Steve Jobs really have a public blow-up with Apple cofounder Steve Wozniak before the iMac launch?",
+    "description": "No. In fact-checking Steve Jobs, we learned that the shouting match was completely invented. At the time of the iMac launch in 1998, Woz was no longer an active employee at Apple. The real blow-up happened years earlier."
+  }
+]
+
+trivia = [
+  "The three sequences in the film were filmed on 16mm, 35mm, and digital to illustrate the advancement in Apple's technology across the sixteen years depicted of Jobs' life.",
+  "Michael Fassbender said in an interview that Christian Bale, who exited the project in November 2014, would have been perfect to play Steve Jobs. \"I thought to myself: Christian Bale is perfect, why isn't he doing it?\" Fassbender told The Hollywood Reporter while promoting the film in London. \"I actually called him up and told him that myself.\"",
+  "Apple co-founder Steve Wozniak was a consultant for the film.",
+  "Seth Rogen met with Steve Wozniak extensively to understand him. Rogen also researched Wozniak's keynotes and speeches online. Rogen cited watching an old eighties video on repeat, featuring Wozniak giving a tour of the Apple museum at their headquarters, as part of his research. Rogen later admitted that he had no idea who Steve Wozniak was prior to working on this movie.",
+  "David Fincher was originally attached to direct. Sony dropped him after he demanded a $10 million salary and full creative control of the project. Fincher wanted Christian Bale to play the lead role. After his departure, Danny Boyle signed on to direct, and Leonardo DiCaprio was approached about the title role. DiCaprio passed on the project, and it was offered to Christian Bale instead. Bale also declined, feeling he was not right for the part."
+]
+
+quotes = [
+  {
+    "quote": "Almost nothing in it is like it really happened. The film deviates from reality everywhere.",
+    "person": "Andy Hertzfeld"
+  },
+  {
+    "quote": "My impression was I was shocked and amazed at how good it was in the sense of professional film-making.",
+    "person": "Steve \"Woz\" Wozniak"
+  }
+]

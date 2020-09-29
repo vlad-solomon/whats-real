@@ -9,9 +9,17 @@
 
 @import "2-basics/inputs.scss";
 @import "2-basics/card.scss";
+@import "2-basics/header.scss";
+@import "2-basics/movie-details.scss";
+@import "2-basics/movie-scene.scss";
+@import "2-basics/trivia.scss";
+@import "2-basics/quote.scss";
+@import "2-basics/actors.scss";
 
 // 3-LAYOUTS
 
 @import "3-layouts/hero.scss";
 @import "3-layouts/cards.scss";
 @import "3-layouts/footer.scss";
+@import "3-layouts/movie-page.scss";
+@import "3-layouts/movie-page-container.scss";

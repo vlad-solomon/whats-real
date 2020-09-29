@@ -33,12 +33,16 @@
     &:hover{
         transform: translateY(-5px);
     }
+    &.visible{
+        display: block;
+    }
 }
 
-.visible{
-    display: block;
-}
 
 .not-found{
     @extend .card;
+    cursor: auto;
+    &:hover{
+        transform: none;
+    }
 }

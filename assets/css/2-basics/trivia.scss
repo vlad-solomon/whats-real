@@ -1,0 +1,18 @@
+.trivia{
+    padding: 35px;
+    background-color: var(--alternate);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 35px;
+    span{
+        display: block;
+        font-size: 0.9375rem;
+        line-height: 160%;
+        opacity: 0.8;
+        &:not(:last-child){
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

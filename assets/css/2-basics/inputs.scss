@@ -32,4 +32,18 @@
             }
         }
     }
+    &--small{
+        width: 386px;
+    }
+    &--nav{
+        justify-content: center;;
+        width: 40px;
+        padding: 0;
+    }
+
+    
+}
+
+#back-to-homepage{
+    margin: 100px auto;
 }

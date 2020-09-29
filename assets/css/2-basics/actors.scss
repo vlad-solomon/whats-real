@@ -1,0 +1,38 @@
+.actors{
+    width: 100%;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    &__card{
+        position: relative;
+        height: 235px;
+        // background-color: var(--accent);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        &:last-child{
+            grid-column: 2;
+        }
+        &::before{
+            content: url("/assets/img/gradient.png");
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50%;
+        }
+    }
+    &__image{
+        height: 100%;
+        width: 100%;
+    }
+    &__role{
+        position: absolute;
+        width: 90%;
+        bottom: 10px;
+        left: 10px;
+        color: var(--alternate);
+        font-family: "Helvetica Bold";
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    }
+}
