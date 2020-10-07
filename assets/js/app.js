@@ -15,7 +15,6 @@ for(i = 0; i < movieCards.length; i++){
     card.appendTo(".cards__grid")
 }
 
-
 const search = $("#movie-search");
 const closeSearch = $("#close-search");
 
@@ -51,7 +50,7 @@ search.keyup(function(){
         closeSearch.click(function(){
             closeSearch.attr("src" , "/assets/img/icons/search.svg");
             closeSearch.removeAttr("style")
-            $("#movie-search").val("");
+            search.val("");
             $(".card").addClass("visible");
             $(".not-found").removeClass("visible")
         })
@@ -68,12 +67,13 @@ search.keyup(function(){
 })
 
 const movieContainer = $(".movie-page-container");
+const html = $("html");
 const body = $("body");
 
 let moviesArray = movieCards.map(({data}) => data)
 
 $(".card").click(function(){
-
+    
     let movie = $(this).data("movie");
     
     let movieDetails = $(`<script src="/assets/movies/${movie}/${movie}.js"></script>`)
@@ -91,6 +91,7 @@ $("#random").click(function(){
 
 function openMoviePage(movie){
 
+    html.css("overflow" , "hidden");
     body.css("overflow" , "hidden");
     
     movieContainer.load("/assets/movies/movie-template.html", function(){
@@ -105,18 +106,46 @@ function openMoviePage(movie){
         
         setTimeout(function(){
             $(".movie-page").css("pointer-events" , "auto");
-            movieContainer.css("overflow" , "auto");
+            movieContainer.css("overflow-y" , "auto");
         }, 2500)
         
-        $("#back").click(function(){
+        $("#back, #back-to-homepage").click(function(){
             closeMoviePage();
+            console.log(movieContainer.height())
         });
 
         populateMoviePage(movie);
         rateMovie();
 
+        if($(window).width() <= 1050){
+            setTimeout(function(){
+                initalizeActorsCarousel();
+            }, 2500)
+        }
+
+        console.log(movieContainer.height())
+
     });
 }
+
+function initalizeActorsCarousel(){
+    $(".main-carousel").flickity({
+        cellAlign: "left",
+        freeScroll: true,
+        contain: true,
+        pageDots: false,
+        prevNextButtons: false,
+    });
+}
+
+
+$(window).resize(function(){
+    if($(window).width() >= 1050 && $(".main-carousel").hasClass("flickity-enabled")){
+        $(".main-carousel").flickity("destroy")
+    } else if($(window).width() <= 1050 && !$(".main-carousel").hasClass("flickity-enabled")){
+        initalizeActorsCarousel();
+    }
+})
 
 function populateMoviePage(movie){
     
@@ -149,7 +178,7 @@ function populateMoviePage(movie){
         actors[i].image = actors[i].name.toLowerCase().replace(/\s/g, '');
     
         let actorCard = $("<div>");
-        actorCard.addClass("actors__card");
+        actorCard.addClass("actors__card carousel-cell");
     
         let actorName = $(`<span class="actors__role">${actors[i].name} is ${actors[i].role}</span>`);
         let actorImage = $(`<img src="/assets/movies/${movie}/actors/${actors[i].image}.png" class="actors__image" alt="${actors[i].image}">`)
@@ -208,6 +237,7 @@ function closeMoviePage(){
 
     search.val("")
     closeSearch.attr("src" , "/assets/img/icons/search.svg");
+    closeSearch.removeAttr("style")
     $(".card").addClass("visible")
 
     movieContainer.css("overflow" , "hidden");
@@ -216,6 +246,7 @@ function closeMoviePage(){
     $(".movie-page").removeClass("visible")
 
     setTimeout(function(){
+        html.removeAttr("style")
         body.removeAttr("style")
         movieContainer.removeAttr("style");
         movieContainer.children().remove();

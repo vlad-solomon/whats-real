@@ -6,7 +6,7 @@
     margin-top: -200px;
     transform: translateY(50px);
     opacity: 0;
-    transition: 1s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     pointer-events: none;
     &__controls{
         position: relative;

@@ -1,0 +1,17 @@
+@media(max-width: 425px){
+    .hero__heading{
+        font-size: 2rem;
+    }
+    .movie-scene__title{
+        font-size: 1.1rem;
+    }
+    .quote__main{
+        font-size: 1.8rem;
+    }
+    .button--small{
+        width: 100%;
+        &#back-to-homepage{
+            margin: 80px 0 35px;
+        }
+    }
+}

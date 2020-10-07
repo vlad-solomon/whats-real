@@ -4,7 +4,7 @@
     width: 100%;
     background-color: var(--accent);
     clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
-    transition: 1s ease-in-out;
+    transition: clip-path 1s ease-in-out;
     transition-delay: 500ms;
     object-fit: cover;
     

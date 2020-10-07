@@ -14,11 +14,16 @@
         line-height: 120%;
     }
     &__image{
-        height: 400px;
         width: 100%;
-        // background-color: var(--accent);
+        background-color: var(--accent);
         border-radius: 5px;
         margin: 25px 0;
+        object-fit: cover;
+        &::before{
+            display: block;
+            content: "";
+            padding-top: 56.25%;
+        }
     }
     &__description{
         font-size: 0.9375rem;

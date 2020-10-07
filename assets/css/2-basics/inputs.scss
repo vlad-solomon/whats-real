@@ -14,6 +14,7 @@
     padding: 0 25px;
     overflow: hidden;
     cursor: pointer;
+    transition: transform 300ms ease-in-out;
     &--search{
         cursor: auto;
         position: relative;
@@ -31,6 +32,11 @@
                 color: var(--accent);
             }
         }
+
+        &:hover{
+            transform: none !important;
+        }
+
     }
     &--small{
         width: 386px;
@@ -39,6 +45,10 @@
         justify-content: center;;
         width: 40px;
         padding: 0;
+    }
+
+    &:hover{
+        transform: translateY(-5px)
     }
 
     

@@ -1,0 +1,19 @@
+@media(max-width: 768px){
+    .page-content{
+        max-width: 100%;
+        padding: 0 18px;
+    }
+}
+
+@media(max-width: 600px){
+    .cards__grid{
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+        gap: 25px;
+    }
+    .hero{
+        &__blurb{
+            width: 100%;
+        }
+    }
+}
