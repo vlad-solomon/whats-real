@@ -74,6 +74,7 @@ body {
 .fade-in {
   transition: 1s;
   opacity: 1;
+  pointer-events: none;
 }
 
 .fade-out {
@@ -502,6 +503,59 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   background-color: var(--alternate);
+}
+
+.trailer {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--accent);
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  pointer-events: none;
+}
+.trailer__inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.trailer__container {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  width: 100%;
+  border: 5px solid var(--alternate);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.trailer__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.trailer__container #close-trailer {
+  position: absolute;
+  top: -65px;
+  right: -5px;
+}
+.trailer__title {
+  font-size: 1.5rem;
+  font-family: "Helvetica Bold";
+  color: var(--alternate);
+}
+.trailer__title::after {
+  display: block;
+  font-family: "Helvetica Light";
+  content: "Powered by YouTube";
+  font-size: 1rem;
+  margin-top: 5px;
+  opacity: 0.5;
 }
 
 @media (max-width: 1440px) {

@@ -6,7 +6,7 @@ for(i = 0; i < movieCards.length; i++){
     card.addClass("card visible")
     card.attr("data-movie" , movieCards[i].data)
     
-    let cardBackground = $(`<img src="assets/img/temp/${movieCards[i].data}.png" alt="${movieCards[i].data}" class="card__background">`);
+    let cardBackground = $(`<img src="assets/movies/${movieCards[i].data}/card.jpg" alt="${movieCards[i].data}" class="card__background">`);
     let cardTitle = $(`<span class="card__title">${movieCards[i].title}</span>`)
     
     cardTitle.appendTo(card)
@@ -73,20 +73,25 @@ const body = $("body");
 let moviesArray = movieCards.map(({data}) => data)
 
 $(".card").click(function(){
-    
+
     let movie = $(this).data("movie");
+
+    $("body > div:not(.movie-page-container)").addClass("fade-out")
     
     let movieDetails = $(`<script src="/assets/movies/${movie}/${movie}.js"></script>`)
-    movieDetails.appendTo(body)
-
-    openMoviePage(movie);
-
+    setTimeout(function(){
+        movieDetails.appendTo(body)
+        openMoviePage(movie);
+    })
 })
 
 $("#random").click(function(){
     let randomMovie = moviesArray[Math.floor(Math.random() * moviesArray.length)]
-    body.append(`<script src="/assets/movies/${randomMovie}/${randomMovie}.js"></script>`)
-    openMoviePage(randomMovie)
+    $("body > div:not(.movie-page-container)").addClass("fade-out")
+    setTimeout(function(){
+        body.append(`<script src="/assets/movies/${randomMovie}/${randomMovie}.js"></script>`)
+        openMoviePage(randomMovie)
+    })
 })
 
 function openMoviePage(movie){
@@ -96,8 +101,6 @@ function openMoviePage(movie){
     
     movieContainer.load("/assets/movies/movie-template.html", function(){
 
-        $("body > div:not(.movie-page-container)").addClass("fade-out")
-        
         setTimeout(function(){
             $(".header").addClass("visible");
             $(".movie-page").addClass("visible")
@@ -111,8 +114,24 @@ function openMoviePage(movie){
         
         $("#back, #back-to-homepage").click(function(){
             closeMoviePage();
-            console.log(movieContainer.height())
         });
+
+        $("#open-trailer").click(function(){
+            movieContainer.css("overflow-y" , "hidden");
+            $(".trailer").css({
+                "opacity" : "1",
+                "pointer-events" : "auto"
+            })
+        });
+
+        $("#close-trailer").click(function(){
+            movieContainer.css("overflow-y" , "auto");
+            $(".trailer").removeAttr("style")
+
+            let trailerSrc = $("iframe").attr("src");
+            $("iframe").attr("src" , "")
+            $("iframe").attr("src" , trailerSrc)
+        })
 
         populateMoviePage(movie);
         rateMovie();
@@ -122,8 +141,6 @@ function openMoviePage(movie){
                 initalizeActorsCarousel();
             }, 2500)
         }
-
-        console.log(movieContainer.height())
 
     });
 }
@@ -148,6 +165,11 @@ $(window).resize(function(){
 })
 
 function populateMoviePage(movie){
+
+    let embedOptions = `?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&disablekb=1" frameborder="0"`
+
+    $("iframe").attr("src" , `${trailer.link}${embedOptions}`)
+    $(".trailer__title").text(`${trailer.title}`)
     
     const movieHeader = $(".header")
     movieHeader.attr("src" , `/assets/movies/${movie}/header.png`)
@@ -181,7 +203,7 @@ function populateMoviePage(movie){
         actorCard.addClass("actors__card carousel-cell");
     
         let actorName = $(`<span class="actors__role">${actors[i].name} is ${actors[i].role}</span>`);
-        let actorImage = $(`<img src="/assets/movies/${movie}/actors/${actors[i].image}.png" class="actors__image" alt="${actors[i].image}">`)
+        let actorImage = $(`<img src="/assets/movies/${movie}/actors/${actors[i].image}.jpg" class="actors__image" alt="${actors[i].image}">`)
     
         actorName.appendTo(actorCard)
         actorImage.appendTo(actorCard)
@@ -197,7 +219,7 @@ function populateMoviePage(movie){
         sceneCard.addClass("movie-scene");
     
         let sceneName = $(`<span class="movie-scene__title">${scenes[i].name}</span>`)
-        let sceneImage = $(`<img src="/assets/movies/${movie}/scenes/${i}.png" class="movie-scene__image" alt="${i}">`)
+        let sceneImage = $(`<img src="/assets/movies/${movie}/scenes/${i}.jpg" class="movie-scene__image" alt="${i}">`)
         let sceneDescription = $(`<span class="movie-scene__description">${scenes[i].description}</span>`);
     
         sceneName.appendTo(sceneCard);
@@ -227,7 +249,6 @@ function populateMoviePage(movie){
         quoteContainer.appendTo($(".quotes"))
 
     }
-
 }
 
 function closeMoviePage(){

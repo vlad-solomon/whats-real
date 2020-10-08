@@ -108,3 +108,8 @@ quotes = [
     "person": "Niki Lauda"
   }
 ]
+
+trailer = {
+  "link" : "https://www.youtube.com/embed/9ZJqxgR-5Xc",
+  "title" : "Rush - Theatrical Trailer"
+}

@@ -17,6 +17,7 @@ body{
 .fade-in{
     transition: 1s;
     opacity: 1;
+    pointer-events: none;
 }
 
 .fade-out{

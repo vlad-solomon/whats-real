@@ -132,3 +132,8 @@ quotes = [
     "person": "informationisbeautiful.com"
   }
 ]
+
+trailer = {
+  "link" : "https://www.youtube.com/embed/mBBuzHrZBro",
+  "title" : "Bridge of Spies Official Trailer #1 (2015) - Tom Hanks Cold War Thriller HD"
+}

@@ -116,3 +116,8 @@ quotes = [
     "person": "Katherine Johnson"
   }
 ]
+
+trailer = {
+  "link" : "https://www.youtube.com/embed/5wfrDhgUMGI",
+  "title" : "Hidden Figures | Official Trailer [HD] | 20th Century FOX"
+}

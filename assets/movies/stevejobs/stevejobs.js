@@ -96,3 +96,8 @@ quotes = [
     "person": "Steve \"Woz\" Wozniak"
   }
 ]
+
+trailer = {
+  "link" : "https://www.youtube.com/embed/aEr6K1bwIVs",
+  "title" : "Steve Jobs - Official Trailer (HD)"
+}
