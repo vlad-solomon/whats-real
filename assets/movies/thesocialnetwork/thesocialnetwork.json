@@ -1,0 +1,137 @@
+{
+    "title" : "The Social Network",
+    "summary" : "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business.",
+    "rating" : "7.7",
+    "directors" : [
+      "David Fincher"
+    ],
+    "writers" : [
+      "Aaron Sorkin",
+      "Ben Mezrich"
+    ],
+    "actors" : [
+      {
+        "name": "Jesse Eisenberg",
+        "role": "Mark Zuckerberg"
+      },
+      {
+        "name": "Andrew Garfield",
+        "role": "Eduardo Saverin"
+      },
+      {
+        "name": "Justin Timberlake",
+        "role": "Sean Parker"
+      },
+      {
+        "name": "Joseph Mazzello",
+        "role": "Dustin Moskovitz"
+      },
+      {
+        "name": "Armie Hammer",
+        "role": "Cameron & Tyler Winklevoss"
+      },
+      {
+        "name": "Max Minghella",
+        "role": "Divya Narendra"
+      }
+    ],
+    "scenes" : [
+      {
+        "name": "Did Mark create a website called Facemash.com after a fight with his girlfriend?",
+        "description": "Yes, and he blogged about it. “I need to think of something to make to take my mind off her…” Mark came up with the idea of comparing classmates to farm animals and letting people vote on who was more attractive. Luckily, one of his roommates, Billy Olson, said that they should compare classmates to each other rather than to animals and only occasionally add in animals for amusement. Ultimately, Facemash was created with no animals involved. Mark was put on probation by the Administrative Board and sent to see a counselor. He apologized to women’s groups offended by the site, including the Association of Harvard Black Women whom he eventually helped build a website of their own. No other people involved were punished. It is this project that inspired Cameron and Tyler Winklevoss to approach Zuckerberg for help with their Harvard Connection website idea."
+      },
+      {
+        "name": "Did Harvard shutdown Facemash or was it overloaded?",
+        "description": "After four hours of being live, Harvard’s computer services department noticed the surge in traffic and shut down Zuckerberg’s web access. Overall, it reached approximately 450 students, logging 22,000 votes."
+      },
+      {
+        "name": "Did Mark really upload his high school project Synapse for free rather than selling it for over a million dollars?",
+        "description": "Yes. Synapse was a plug-in for the MP3 player Winamp that Mark and his friend Adam D’Angelo created for their final project at Phillips Exeter Academy. The software looked at what music you enjoyed listening to and then suggested more music that it thought you would like. Despite being offered as much as $2 million for their creation from companies like Microsoft, AOL and Winamp, they instead decided to put Synapse up on the internet for free. Later, they decided to try to make a deal, but the offers were no longer the same since their software was already readily available."
+      },
+      {
+        "name": "What was Course Match?",
+        "description": "Course Match was an application Mark Zuckerberg created for Harvard students in the fall of 2003. The program allowed students to determine which classes they wanted to take by informing them of who was already signed up for a particular class. You could also see a list of the classes that an individual was taking."
+      },
+      {
+        "name": "Who were the founders of Facebook and what were their roles?",
+        "description": "The founding of Facebook is attributed to four individuals. Mark Zuckerberg set it up with two of his roommates, Chris Hughes and Dustin Moskovitz, as well as his friend and fraternity brother (Alpha Epsilon Pi) Eduardo Saverin. Zuckerberg led with the overall idea and initial development of the site. Moskovitz was hired to help expand it to more campuses. He researched the schools and made adjustments to the code so new students were able to register. Hughes was their spokesman and handled interview requests. Eduardo Saverin provided the initial investment needed to launch the site and managed the business side of the operation."
+      },
+      {
+        "name": "How much money did Eduardo Saverin invest in Facebook?",
+        "description": "Saverin’s original investment to help start the company was $1,000. Zuckerberg himself also contributed $1,000. Soon after, they both agreed to invest an additional $10,000 each to cover the quickly growing server costs. A few months later, Eduardo opened a bank account to cover business expenses and to deposit advertising revenues, at which point he added an additional $10,000 of his own money."
+      },
+      {
+        "name": "What was the original pay agreement regarding Facebook?",
+        "description": "The first agreement made was a 70 – 30 split between Mark Zuckerberg and Eduardo Saverin. About a month after Thefacebook was released to Harvard, Mark Zuckerberg’s roommate Dustin Moskovitz asked to work on the project as well. He was given 5%, reducing Mark’s cut to 65%. When Sean Parker entered the picture, the company was reincorporated and new corporate bylaws were written up. As a result, Zuckerberg was entitled to 51%, Saverin 34.4%, Moskovitz 6.81% and Parker 6.47%, with the remaining allotted to their law firm."
+      },
+      {
+        "name": "How long did it take to create the social network Facebook?",
+        "description": "Soon after the release of Facemash, the Winklevoss twins and Divya Narendra approached Mark for help on their Harvard dating website idea. They believed he was working on it for most of that time (there was a three month time span between the release of Facemash and Facebook) but in Mark Zuckerberg’s own words, “The Facebook literally took me a week to make.”"
+      },
+      {
+        "name": "When was the Facebook website launched?",
+        "description": "On January 11, 2004, Mark registered Thefacebook.com for a year for $35 through Register.com. it went live for Harvard students on February 4, 2004. When the decision was made to remove the “the”, Facebook.com was acquired from AboutFace for $200,000 and debuted on September 20, 2005."
+      },
+      {
+        "name": "Was Mark Zuckerberg’s picture featured on the original Facebook design?",
+        "description": "No. According to The Social Network true story, a picture of Al Pacino was on the top left corner. The bottom of the pages did however read, ‘A Mark Zuckerberg Production’."
+      },
+      {
+        "name": "Did Mark work with Napster co-founder Sean Parker?",
+        "description": "Yes. Sean Parker actively sought out Mark Zuckerberg and e-mailed him. Eduardo Saverin responded to the email and they arranged for a meeting in New York at an upscale Chinese restaurant in Tribeca called 66. Like in the Facebook movie The Social Network, the two hit it off immediately, in part because Parker understood Mark’s vision for the site. Parker picked up the tab despite it breaking his bank. However, the two lost touch. Two months later when they unexpectedly met on the streets of Palo Alto, Mark invited Sean to move into the house with them and soon after he was considered president of the company."
+      },
+      {
+        "name": "Was there an article published about Eduardo Saverin being involved with chicken cannibalism?",
+        "description": "No. When investigating the Facebook true story, it was discovered that in December of 2003, The Harvard Crimson published an article that addressed accusations of animal cruelty as part of the Phoenix, S. K. Club initiations, an organization which Saverin was involved in. There was no mention of him or cannibalism in the article, but claims were made that they were “ordered to torture and kill live chickens”. No one has admitted or been charged with animal cruelty. However, it is common knowledge that chickens are a part of the Phoenix initiation process, as potential members have been seen carrying around chickens and taking them to classes in cages in prior years."
+      },
+      {
+        "name": "Did Mark and his friends run a zip-line from the chimney of their rented Palo Alto house the pool?",
+        "description": "Yes. Researching The Social Network true story confirmed that a zip-line ran from the chimney of their rented house at 819 La Jennifer Way to a telephone pole across from the pool. The chimney was damaged in the process."
+      },
+      {
+        "name": "Did Eduardo Saverin really freeze the Facebook bank account?",
+        "description": "Yes. In researching the real story behind the Facebook movie The Social Network, it was discovered that Saverin did in fact freeze the bank account he had set up to pay the business expenses. Zuckerberg was forced to pay for the Palo Alto house expenses, the site’s running costs and new servers out of pocket."
+      },
+      {
+        "name": "Did Sean Parker really introduce Mark to his first angel investor?",
+        "description": "Yes. Parker called his friend Reid Hoffman, the founder of LinkedIn and tried to get him to invest. Hoffman concluded he shouldn’t lead in the investment because of his relations to LinkedIn, but he did set up a meeting for them with Peter Thiel. He was a co-founder of Paypal (which was sold to eBay in October 2002 for $1.5 billion) who Parker also knew from Plaxo. Within a week, Thiel agreed to loan them $500,000."
+      },
+      {
+        "name": "Did Mark really go to a meeting wearing pajamas?",
+        "description": "Yes, but he wishes he hadn’t. Michael Moritz of Sequoia Capital had been on Plaxo’s board (one of Sean Parker’s former companies) when Sean worked there, and Sean considered him a primary reason he was ousted from his own company. To get back at them, he convinced Zuckerberg to essentially throw a meeting. Aside from showing up late and in pajamas, he proceeded to give a presentation on why Sequoia should not invest in their venture. Needless to say, they never did. Now Zuckerberg states, “I assume we really offended them and now I feel really bad about that because they’re serious people trying to do good stuff and we wasted their time. It’s not a story I’m very proud of.”"
+      },
+      {
+        "name": "Were Eduardo Saverin’s shares diluted down to .03%?",
+        "description": "No. They weren't diluted down that low, but they were still diluted significantly. After the corporation was restructured and Facebook gained more investors, his 34.4% share of the company was diluted down to below 10%, in turn ending their business relationship."
+      },
+      {
+        "name": "Was Sean Parker charged with cocaine possession during the raid of a party like in The Social Network movie?",
+        "description": "Not exactly. During our exploration of the Facebook true story, we discovered that in August 2005, Sean Parker was arrested for felony possession of cocaine in North Carolina at a house party he was throwing for some new beach friends. Despite being arrested, he was never formerly charged. After pressure from board members, he voluntarily resigned from Facebook."
+      },
+      {
+        "name": "Did Zuckerberg really have business cards that said, “I’m CEO…bitch”?",
+        "description": "Yes. According to the book The Facebook Effect by David Kirkpatrick, Mark had two sets of business cards. One read, ‘CEO’ while the other read, \"I’m CEO…bitch\"."
+      },
+      {
+        "name": "Did the Winklevoss twins and Divya Narendra win their lawsuit?",
+        "description": "Yes. In early 2008, the ConnectU vs. Facebook lawsuit was settled, awarding Tyler Winklevoss, Cameron Winklevoss and Divya Narendra $65 million in a combination of stock and cash. They later contended that the stock valuation presented was incorrect, bringing down the true value of their settlement. It was ruled that they had adequate representation during the case and it was not reopened."
+      }
+    ],
+    "trivia" : [
+      "Jesse Eisenberg, who is diagnosed with obsessive compulsive disorder (OCD), said in an interview that one of the hardest things about the role was having to deliberately speak and behave in a manner he had struggled against in his own personality his entire life.",
+      "Natalie Portman revealed during \"Newsweek's 2011 Oscar Roundtable\" that she gave a dinner party for writer Aaron Sorkin, while he was writing the script for this movie, to which she invited a bunch of her friends from Harvard. She wanted to give him the chance to listen to first-hand stories about the social life at Harvard University.",
+      "Mark Zuckerberg originally planned never to see this movie. He ended up taking several of his employees to see it. He later remarked that, despite some of the film's inaccuracies, they got his clothing right.\n\nAndrew Garfield came into rehearsal with a copy of Economics for Dummies. Inspired by that m",
+      "Andrew Garfield came into rehearsal with a copy of Economics for Dummies. Inspired by that move, Jesse Eisenberg bought C++ for Dummies. According to Eisenberg, both he and Garfield read the introductions of their books and then put them down.",
+      "David Fincher's favorite line in the film is, \"I'm just checking your math on that. Yes, I got the same thing.\""
+    ],
+    "quotes" : [
+      {
+        "quote": "They went out of their way in the movie to try to get some interesting details correct like the design of the office, but on the overarching plot … they just kind of made up a bunch of stuff that I found kind of hurtful.",
+        "person": "Mark Zuckerberg"
+      }
+    ],
+    "trailer" : {
+      "link": "https://www.youtube.com/embed/lB95KLmpLR4",
+      "title": "THE SOCIAL NETWORK - Official Trailer (HD)"
+    }
+}

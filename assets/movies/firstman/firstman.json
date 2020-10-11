@@ -1,0 +1,113 @@
+{
+    "title" : "First Man",
+    "summary" : "A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.",
+    "rating" : "7.3",
+    "directors" : [
+      "Damien Chazelle"
+    ],
+    "writers" : [
+      "Josh Singer",
+      "James R. Hansen"
+    ],
+    "actors" : [
+      {
+        "name": "Ryan Gosling",
+        "role": "Neil Armstrong"
+      },
+      {
+        "name": "Claire Foy",
+        "role": "Janet Armstrong"
+      },
+      {
+        "name": "Corey Stoll",
+        "role": "Buzz Aldrin"
+      },
+      {
+        "name": "Lukas Haas",
+        "role": "Mike Collins"
+      },
+      {
+        "name": "Patrick Fugit",
+        "role": "Elliot See"
+      },
+      {
+        "name": "Kyle Chandler",
+        "role": "Deke Slayton"
+      },
+      {
+        "name": "Jason Clarke",
+        "role": "Ed White"
+      },
+      {
+        "name": "Shea Whigham",
+        "role": "Gus Grissom"
+      },
+      {
+        "name": "Cory Michael Smith",
+        "role": "Roger Chaffee"
+      }
+    ],
+    "scenes" : [
+      {
+        "name": "Is the movie's opening scene, in which Neil Armstrong pilots an X-15 rocket plane into the stratosphere, depicted accurately?",
+        "description": "For the most part, yes. He indeed had trouble returning to Earth as the plane began to bounce off the atmosphere instead of slicing back into it. Armstrong was more than 20 miles above the Earth. The only part of that scene that isn't as realistic is when we're able to look out the window of his plane and see the white clouds just below. At 120,000 feet, he was roughly double the altitude of the highest clouds, so realistically, the clouds would have been much further beneath him."
+      },
+      {
+        "name": "Was astronaut Neil Armstrong really an introverted and quiet hero like he's portrayed to be in the movie?",
+        "description": "Yes. The First Man true story reveals that unlike many astronauts, Neil Armstrong was not the hotshot type, nor was he a fame-seeker. He was a man of few words who was driven to accomplish something no other human being had done. Up to his death, he largely remained a bit of an enigma."
+      },
+      {
+        "name": "Is the song playing when Neil and Janet dance in the living room based on an actual song that they listened to?",
+        "description": "Yes. The eerie space melody that Neil and Janet dance to in the biopic is an actual song that they listened to. “It was a track that Neil and Janet shared with each other and that Neil wound up bringing with him on the Apollo 11 mission,\" says director Damien Chazelle. \"It’s called 'Lunar Rhapsody'. It's quite appropriate, but it's this sort of weird Theremin orchestral track from the early days of the Theremin [an electric instrument with metal antennas].”"
+      },
+      {
+        "name": "Did Neil Armstrong really lose a daughter to brain cancer?",
+        "description": "Yes. On January 28, 1962, Neil and Janet lost their two-year-old daughter Karen to a case of pneumonia while suffering from a malignant brain tumor. \"I thought the best thing for me to do in that situation was to continue with my work,\" said Armstrong, \"keep things as normal as I could, and try as hard as I could not to have it affect my ability to do useful things.\" He became an astronaut that same year. The movie seems to depict this time in Armstrong's life rather accurately."
+      },
+      {
+        "name": "Did Neil Armstrong almost die while training for the lunar landing?",
+        "description": "Yes. Two Lunar Landing Research Vehicles were built. Each used a single jet engine turned right-side up to simulate the Moon's one-sixth gravity of Earth. On May 6, 1968, Neil Armstrong was piloting one of the vehicles roughly 100 feet above the ground. Unanticipated depletion of helium used to pressurize the fuel tanks led to a total failure of his flight controls and the LLRV started to go into a roll. He ejected and parachuted safely to the ground. Future analysis concluded that if he had ejected just half a second later, his parachute would not have deployed in time. His brush with death can be seen in the Neil Armstrong LLRV Training Crash Video. The top image below shows Neil Armstrong floating to the ground after Lunar Landing Research Vehicle 1 exploded into a ball of flames upon hitting the field."
+      },
+      {
+        "name": "Did astronaut Neil Armstrong injure his face during the Lunar Lander training accident like in the movie?",
+        "description": "No, he did not injure his face when he was forced to eject from the Lunar Landing Research Vehicle and parachute to the ground. The worst that happened was that he bit his tongue hard during his impact with the ground."
+      },
+      {
+        "name": "Did Neil Armstrong really have a serious talk with his kids about the possibility of him not returning from the mission?",
+        "description": "Yes. Armstrong's sons, Rick and Mark, told USA Today that their father indeed talked with them before going to space and walking on the moon. \"That scene came from us,\" Rick said. He and his brother collaborated with director Damien Chazelle for two-and-a-half years. As for the specifics of the conversation, Mark says he was too young to remember, but Rick says that the movie gets the gist of it right. However, he never remembers directly asking his father, \"Do you think you're coming back?\". \"We think we're coming back, but there is some risk,\" is basically what Armstrong told his sons. With regard to the oldest son shaking his father's hand at the end of the conversation, that was added by the filmmakers. Rick said that it could have happened, or maybe it was a hug. He wasn't sure."
+      },
+      {
+        "name": "Were Neil and Buzz really running low on fuel as they approached the moon's surface?",
+        "description": "As Neil Armstrong and Buzz Aldrin descended to the moon's surface in the Lunar Lander, they believed that they were running low on fuel because the computers were telling that to mission control, indicating that they had less than a minute to either touch down or abort the mission. The nail-biting sequence is true. However, they later learned that the lander hadn't actually been low on fuel. \"You got a bunch of guys about to turn blue. We're breathing again. Thanks a lot,\" flight controller Charlie Duke radioed to Armstrong after the successful landing."
+      },
+      {
+        "name": "Does the lunar footprint in the famous photo belong to Neil Armstrong?",
+        "description": "No. The famous photo of the lunar footprint that is often shown with Armstrong's iconic quote, \"That's one small step for man, one giant leap for mankind,\" is actually Buzz Aldrin's footprint, not Neil Armstrong's. Therefore, it's not the footprint of the first step taken on the Moon, which we see in the movie. Aldrin made the bootprint in the photo as part of an experiment to test the properties of the lunar regolith (the loose rock and dust sitting on top of the lunar bedrock)."
+      },
+      {
+        "name": "Did Neil Armstrong really leave his daughter Karen's bracelet on the moon?",
+        "description": "No. It is here that the movie perhaps takes one of its biggest liberties. There is no historical record that Armstrong left a bracelet of his daughter's on the moon (in the film, he drops it into Little West Crater). Astronauts flew with a PPK (personal preference kit), which included any non-regulation or sentimental items that they wanted to bring with them. Armstrong said that he lost the manifest for his PPK, so we can't be sure what all it contained. We do know that he took with him remnants of fabric and the propeller from the Wright Brothers plane in which they took the first powered flight in 1903. Since Karen's death is believed to have set the course of Armstrong's life (especially at NASA), it's not hard to imagine him bringing a sentimental item of Karen's like the bracelet to the moon. We just don't know for certain if he did, and if so, what he brought."
+      },
+      {
+        "name": "How much time did Neil Armstrong spend walking on the Moon?",
+        "description": "Armstrong's Moon walk lasted 2 and 3/4 hours, even though it feels much shorter in the movie. Astronauts on the five subsequent NASA missions that landed men on the Moon were given progressively longer periods of time to explore the lunar surface, with Apollo 17 astronauts spending 22 hours on EVA (Extravehicular Activity). The reason Armstrong and Buzz Aldrin didn't get to spend more time outside the Lunar Module is that there were uncertainties as to how well the spacesuits would hold up to the extremely high temperatures on the lunar surface."
+      }
+    ],
+    "trivia" : [
+      "Mark Armstrong and Rick Armstrong said that First Man was the most accurate portrayal of their father Neil Armstrong and their mother Janet Armstrong.",
+      "Apollo astronauts were considered government employees, with most at the rank of captain. Regardless of their substantial education, the average yearly income of these astronauts in the 1960s was $17,000 ($112,000 in 2019 money) solely based on military rank. They also were not paid any hazard pay. Additionally the astronauts were paid per-diem of $8 extra a day ($56 in 2019 money) for each day they spent in the spacecraft. However their per-diem was \"pre-deduction\", and they were deducted for living expenses when aboard the spacecraft, as food and a bed was provided for them.",
+      "The \"1201\" and \"1202\" alarms that sounded during the lunar descent was an indication that the computer was receiving more data than it could process. The procedure to fix this was to cycle the switch, which essentially ended the bottleneck. This was not the last time this error had been encountered in an Apollo flight. When Apollo XII was struck by lightning during its launch, it also triggered a 1202.",
+      "Common errors were avoided in this film: Earth and the moon are always lit by the sun at the same angle, no clouds appear at high altitudes, the paradoxical nature of accelerating and braking rockets in orbit, no obtrusive lights hidden inside astronaut helmets to show their faces, and no ambient sound in the vacuum of space.",
+      "Actor Ryan Gosling first discovered Neil Armstrong's love of the theremin during his background research with Armstrong's family and friends. He brought it to Damien Chazelle and Justin Hurwitz's attention, who later chose to include the strange instrument in the score."
+    ],
+    "quotes" : [
+      {
+        "quote": "It's nice that the movie shows some of this other aspects of his personality because it's a much more accurate reflection of he really was.",
+        "person": "Mark Armstrong"
+      }
+    ],
+    "trailer" : {
+      "link": "https://www.youtube.com/embed/PSoRx87OO6k",
+      "title": "First Man - Official Trailer (HD)"
+    }
+}

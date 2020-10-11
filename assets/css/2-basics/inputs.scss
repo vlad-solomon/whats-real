@@ -30,6 +30,7 @@
             outline: none;
             &::placeholder{
                 color: var(--accent);
+                opacity: 1;
             }
         }
 

@@ -55,6 +55,9 @@
             font-size: 1.25rem;
             width: 100%;
         }
+        &__image{
+            margin: 20px 0;
+        }
     }
 
     .trivia{
@@ -72,6 +75,9 @@
     .hero{
         &__heading{
             font-size: 2rem;
+        }
+        &__image{
+            width: 100%;
         }
     }
 
@@ -120,6 +126,9 @@
             margin-bottom: 40px;
             width: 80%;
         }
+        &__image{
+            display: none;
+        }
     }
 
     .footer{
@@ -141,10 +150,11 @@
 
     .cards{
         &__input{
-            display: block;
             margin-bottom: 20px;
             .button:last-child{
-                display: none;
+                font-size: 0;
+                width: 40px;
+                justify-content: center;
             }
         }
         &__grid{
@@ -173,6 +183,13 @@
         &__side{
             width: 100%;
             margin-right: 0;
+        }
+    }
+
+    .trailer__title{
+        font-size: 1rem;
+        &::after{
+            font-size: 0.75rem;
         }
     }
 

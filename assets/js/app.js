@@ -1,18 +1,27 @@
-for(i = 0; i < movieCards.length; i++){
-    let card = $("<div>")
+initializeCardGrid();
 
-    movieCards[i].data = movieCards[i].title.toLowerCase().replace(/\s/g, '')
+function initializeCardGrid(){
+
+    // Create and append cards to the card grid 
+    // for every movie title from the movieCards array
+
+    for(i = 0; i < movieCards.length; i++){
+        let card = $("<div>")
     
-    card.addClass("card visible")
-    card.attr("data-movie" , movieCards[i].data)
+        movieCards[i].data = movieCards[i].title.toLowerCase().replace(/\s/g, '')
+        
+        card.addClass("card visible")
+        card.attr("data-movie" , movieCards[i].data)
+        
+        let cardBackground = $(`<img src="assets/movies/${movieCards[i].data}/card.jpg" alt="${movieCards[i].data}" class="card__background">`);
+        let cardTitle = $(`<span class="card__title">${movieCards[i].title}</span>`)
+        
+        cardTitle.appendTo(card)
+        cardBackground.appendTo(card);
+        
+        card.appendTo(".cards__grid")
+    }
     
-    let cardBackground = $(`<img src="assets/movies/${movieCards[i].data}/card.jpg" alt="${movieCards[i].data}" class="card__background">`);
-    let cardTitle = $(`<span class="card__title">${movieCards[i].title}</span>`)
-    
-    cardTitle.appendTo(card)
-    cardBackground.appendTo(card);
-    
-    card.appendTo(".cards__grid")
 }
 
 const search = $("#movie-search");
@@ -20,6 +29,14 @@ const closeSearch = $("#close-search");
 
 search.keyup(function(){
 
+    // Search through the card grid everytime the
+    // value of the search field is updated
+
+    fuzzySearch();
+})
+
+function fuzzySearch(){
+    
     // Get value of the search field
     let searchValue = $("#movie-search").val();
 
@@ -44,6 +61,9 @@ search.keyup(function(){
 
     })
 
+    // Show or hide the clear search button depending on the
+    // value of the search field
+
     if(searchValue.length > 0){
         closeSearch.attr("src" , "/assets/img/icons/close.svg");
         closeSearch.css("cursor" , "pointer");
@@ -58,40 +78,43 @@ search.keyup(function(){
         closeSearch.attr("src" , "/assets/img/icons/search.svg")
     }
 
+    // Show "not found" card when no card has the class of visible
+
     if(!$(".card").hasClass("visible")){
         $(".not-found").addClass("visible")
     } else{
         $(".not-found").removeClass("visible")
     }
 
-})
+}
 
 const movieContainer = $(".movie-page-container");
 const html = $("html");
 const body = $("body");
 
-let moviesArray = movieCards.map(({data}) => data)
-
 $(".card").click(function(){
 
-    let movie = $(this).data("movie");
-
+    // Open the movie template page and animte out the homepage
+    
     $("body > div:not(.movie-page-container)").addClass("fade-out")
     
-    let movieDetails = $(`<script src="/assets/movies/${movie}/${movie}.js"></script>`)
-    setTimeout(function(){
-        movieDetails.appendTo(body)
-        openMoviePage(movie);
-    })
+    let movie = $(this).data("movie");
+    openMoviePage(movie)
+    
 })
 
+let moviesArray = movieCards.map(({data}) => data)
+
 $("#random").click(function(){
+
+    // Select a random movie from the moviesArray and load it
+    // into the movie template
+
     let randomMovie = moviesArray[Math.floor(Math.random() * moviesArray.length)]
+
     $("body > div:not(.movie-page-container)").addClass("fade-out")
-    setTimeout(function(){
-        body.append(`<script src="/assets/movies/${randomMovie}/${randomMovie}.js"></script>`)
-        openMoviePage(randomMovie)
-    })
+    openMoviePage(randomMovie)
+
 })
 
 function openMoviePage(movie){
@@ -101,16 +124,11 @@ function openMoviePage(movie){
     
     movieContainer.load("/assets/movies/movie-template.html", function(){
 
-        setTimeout(function(){
-            $(".header").addClass("visible");
-            $(".movie-page").addClass("visible")
-            movieContainer.css("z-index" , "1");
-        }, 1000)
-        
-        setTimeout(function(){
-            $(".movie-page").css("pointer-events" , "auto");
-            movieContainer.css("overflow-y" , "auto");
-        }, 2500)
+
+        // Get all the data fron the selected movie's JSON
+        // and populate the movie template page
+
+        populateMoviePage(movie)
         
         $("#back, #back-to-homepage").click(function(){
             closeMoviePage();
@@ -133,9 +151,6 @@ function openMoviePage(movie){
             $("iframe").attr("src" , trailerSrc)
         })
 
-        populateMoviePage(movie);
-        rateMovie();
-
         if($(window).width() <= 1050){
             setTimeout(function(){
                 initalizeActorsCarousel();
@@ -143,9 +158,128 @@ function openMoviePage(movie){
         }
 
     });
+
+}
+
+function populateMoviePage(movie){
+
+    $.ajax({ 
+        type: 'GET', 
+        url: `/assets/movies/${movie}/${movie}.json`, 
+        dataType: 'json',
+        success: function (details) {
+
+            let ratingWidth = parseInt($(".movie-details__rating").css("width"))
+            let ratingScore = (details.rating * ratingWidth) / 10
+
+             $(".movie-details__score").css("width" , `${ratingScore}px`)
+
+            let embedOptions = `?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&disablekb=1" frameborder="0"`
+            $("iframe").attr("src" , `${details.trailer.link}${embedOptions}`)
+            $(".trailer__title").text(`${details.trailer.title}`)
+
+            const movieHeader = $(".header")
+            movieHeader.attr("src" , `/assets/movies/${movie}/header.png`)
+            
+            $(".movie-details__title").text(details.title);
+            $(".movie-details__description").text(details.summary);
+
+            for(i = 0; i < details.directors.length; i++){
+                let director = $(`<span>${details.directors[i]}</span>`);
+                director.appendTo($(".directors"))
+                if(details.directors.length > 1){
+                    $(".directors span:first-child").text("Directors");
+                }
+            }
+
+            for(i = 0; i < details.writers.length; i++){
+                let writer = $(`<span>${details.writers[i]}</span>`);
+                writer.appendTo($(".writers"))
+                if(details.writers.length > 1){
+                    $(".writers span:first-child").text("Writers");
+                }
+            }
+
+            for(i = 0; i < details.actors.length; i++){
+
+                const actorsContainer = $(".actors");
+            
+                details.actors[i].image = details.actors[i].name.toLowerCase().replace(/\s/g, '');
+            
+                let actorCard = $("<div>");
+                actorCard.addClass("actors__card carousel-cell");
+            
+                let actorName = $(`<span class="actors__role">${details.actors[i].name} is ${details.actors[i].role}</span>`);
+                let actorImage = $(`<img src="/assets/movies/${movie}/actors/${details.actors[i].image}.jpg" class="actors__image" alt="${details.actors[i].image}">`)
+            
+                actorName.appendTo(actorCard)
+                actorImage.appendTo(actorCard)
+            
+                actorCard.appendTo(actorsContainer)
+            }
+
+            for(i = 0; i < details.scenes.length; i++){
+
+                const scenesContainer = $(".scenes");
+            
+                let sceneCard = $("<div>");
+                sceneCard.addClass("movie-scene");
+            
+                let sceneName = $(`<span class="movie-scene__title">${details.scenes[i].name}</span>`)
+                let sceneImage = $(`<img src="/assets/movies/${movie}/scenes/${i}.jpg" class="movie-scene__image" alt="${i}">`)
+                let sceneDescription = $(`<span class="movie-scene__description">${details.scenes[i].description}</span>`);
+            
+                sceneName.appendTo(sceneCard);
+                sceneImage.appendTo(sceneCard)
+                sceneDescription.appendTo(sceneCard);
+            
+                sceneCard.appendTo(scenesContainer)
+            
+            }
+
+            for(i = 0; i < details.trivia.length; i++){
+                let triviaSpan = $(`<span>${details.trivia[i]}</span>`)
+                triviaSpan.appendTo($(".trivia"))
+            }
+
+            for(i = 0; i < details.quotes.length; i++){
+
+                const quoteContainer = $("<div>")
+                quoteContainer.addClass("quote")
+        
+                let quoteMain = $(`<span class="quote__main">${details.quotes[i].quote}</span>`)
+                let quotePerson = $(`<span class="quote__person">${details.quotes[i].person}</span>`)
+        
+                quoteMain.appendTo(quoteContainer)
+                quotePerson.appendTo(quoteContainer)
+        
+                quoteContainer.appendTo($(".quotes"))
+        
+            }
+
+            // Animte in the movie page
+
+            setTimeout(function(){
+                $(".header").addClass("visible");
+                $(".movie-page").addClass("visible")
+                movieContainer.css("z-index" , "1");
+            }, 1000)
+            
+            setTimeout(function(){
+                $(".movie-page").css("pointer-events" , "auto");
+                movieContainer.css("overflow-y" , "auto");
+            }, 2500)
+            
+        }
+
+    });
+
 }
 
 function initalizeActorsCarousel(){
+
+    // Carousel properties
+
     $(".main-carousel").flickity({
         cellAlign: "left",
         freeScroll: true,
@@ -153,108 +287,26 @@ function initalizeActorsCarousel(){
         pageDots: false,
         prevNextButtons: false,
     });
+
 }
 
 
 $(window).resize(function(){
+
+    // Enable or disable the actors carousel functionality
+    // depending on the browser window width
+
     if($(window).width() >= 1050 && $(".main-carousel").hasClass("flickity-enabled")){
         $(".main-carousel").flickity("destroy")
     } else if($(window).width() <= 1050 && !$(".main-carousel").hasClass("flickity-enabled")){
         initalizeActorsCarousel();
     }
+
 })
-
-function populateMoviePage(movie){
-
-    let embedOptions = `?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&disablekb=1" frameborder="0"`
-
-    $("iframe").attr("src" , `${trailer.link}${embedOptions}`)
-    $(".trailer__title").text(`${trailer.title}`)
-    
-    const movieHeader = $(".header")
-    movieHeader.attr("src" , `/assets/movies/${movie}/header.png`)
-    
-    $(".movie-details__title").text(title);
-    $(".movie-details__description").text(summary);
-
-    for(i = 0; i < directors.length; i++){
-        let director = $(`<span>${directors[i]}</span>`);
-        director.appendTo($(".directors"))
-        if(directors.length > 1){
-            $(".directors span:first-child").text("Directors");
-        }
-    }
-
-    for(i = 0; i < writers.length; i++){
-        let writer = $(`<span>${writers[i]}</span>`);
-        writer.appendTo($(".writers"))
-        if(writers.length > 1){
-            $(".writers span:first-child").text("Writers");
-        }
-    }
-
-    for(i = 0; i < actors.length; i++){
-
-        const actorsContainer = $(".actors");
-    
-        actors[i].image = actors[i].name.toLowerCase().replace(/\s/g, '');
-    
-        let actorCard = $("<div>");
-        actorCard.addClass("actors__card carousel-cell");
-    
-        let actorName = $(`<span class="actors__role">${actors[i].name} is ${actors[i].role}</span>`);
-        let actorImage = $(`<img src="/assets/movies/${movie}/actors/${actors[i].image}.jpg" class="actors__image" alt="${actors[i].image}">`)
-    
-        actorName.appendTo(actorCard)
-        actorImage.appendTo(actorCard)
-    
-        actorCard.appendTo(actorsContainer)
-    }
-    
-    for(i = 0; i < scenes.length; i++){
-    
-        const scenesContainer = $(".scenes");
-    
-        let sceneCard = $("<div>");
-        sceneCard.addClass("movie-scene");
-    
-        let sceneName = $(`<span class="movie-scene__title">${scenes[i].name}</span>`)
-        let sceneImage = $(`<img src="/assets/movies/${movie}/scenes/${i}.jpg" class="movie-scene__image" alt="${i}">`)
-        let sceneDescription = $(`<span class="movie-scene__description">${scenes[i].description}</span>`);
-    
-        sceneName.appendTo(sceneCard);
-        sceneImage.appendTo(sceneCard)
-        sceneDescription.appendTo(sceneCard);
-    
-        sceneCard.appendTo(scenesContainer)
-    
-    }
-
-    for(i = 0; i < trivia.length; i++){
-        let triviaSpan = $(`<span>${trivia[i]}</span>`)
-        triviaSpan.appendTo($(".trivia"))
-    }
-
-    for(i = 0; i < quotes.length; i++){
-
-        const quoteContainer = $("<div>")
-        quoteContainer.addClass("quote")
-
-        let quoteMain = $(`<span class="quote__main">${quotes[i].quote}</span>`)
-        let quotePerson = $(`<span class="quote__person">${quotes[i].person}</span>`)
-
-        quoteMain.appendTo(quoteContainer)
-        quotePerson.appendTo(quoteContainer)
-
-        quoteContainer.appendTo($(".quotes"))
-
-    }
-}
 
 function closeMoviePage(){
 
-    // reset the search field and the cards
-    // if the user searched for a movie
+    // Reset everything back to normal when the close button is clicked
 
     search.val("")
     closeSearch.attr("src" , "/assets/img/icons/search.svg");
@@ -272,20 +324,10 @@ function closeMoviePage(){
         movieContainer.removeAttr("style");
         movieContainer.children().remove();
         $("body > div:not(.movie-page-container)").removeClass("fade-out").addClass("fade-in")
-        $("script").last().remove();
     }, 1500)
     
     setTimeout(function(){
         $("body > div:not(.movie-page-container)").removeClass("fade-in")
     }, 2500)
 
-}
-
-function rateMovie(){
-
-    let ratingWidth = parseInt($(".movie-details__rating").css("width"))
-    let ratingScore = (rating * ratingWidth) / 10
-
-    $(".movie-details__score").css("width" , `${ratingScore}px`)
-    
 }
