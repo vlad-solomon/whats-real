@@ -231,14 +231,14 @@ body {
 .movie-details__rating {
   height: 10px;
   width: 70px;
-  background-image: url("/assets/img/icons/rating-background.png");
+  background-image: url("../img/icons/rating-background.png");
   background-size: cover;
   margin-top: 5px;
   margin-bottom: 25px;
 }
 .movie-details__score {
   height: 100%;
-  background-image: url("/assets/img/icons/rating-score.png");
+  background-image: url("../img/icons/rating-score.png");
   background-size: cover;
 }
 .movie-details__subsection {
