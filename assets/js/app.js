@@ -65,17 +65,17 @@ function fuzzySearch(){
     // value of the search field
 
     if(searchValue.length > 0){
-        closeSearch.attr("src" , "/assets/img/icons/close.svg");
+        closeSearch.attr("src" , "assets/img/icons/close.svg");
         closeSearch.css("cursor" , "pointer");
         closeSearch.click(function(){
-            closeSearch.attr("src" , "/assets/img/icons/search.svg");
+            closeSearch.attr("src" , "assets/img/icons/search.svg");
             closeSearch.removeAttr("style")
             search.val("");
             $(".card").addClass("visible");
             $(".not-found").removeClass("visible")
         })
     } else{
-        closeSearch.attr("src" , "/assets/img/icons/search.svg")
+        closeSearch.attr("src" , "assets/img/icons/search.svg")
     }
 
     // Show "not found" card when no card has the class of visible
@@ -194,7 +194,7 @@ function populateMoviePage(movie){
             $(".trailer__title").text(`${details.trailer.title}`)
 
             const movieHeader = $(".header")
-            movieHeader.attr("src" , `/assets/movies/${movie}/header.png`)
+            movieHeader.attr("src" , `assets/movies/${movie}/header.png`)
             
             $(".movie-details__title").text(details.title);
             $(".movie-details__description").text(details.summary);
@@ -225,7 +225,7 @@ function populateMoviePage(movie){
                 actorCard.addClass("actors__card carousel-cell");
             
                 let actorName = $(`<span class="actors__role">${details.actors[i].name} is ${details.actors[i].role}</span>`);
-                let actorImage = $(`<img src="/assets/movies/${movie}/actors/${details.actors[i].image}.jpg" class="actors__image" alt="${details.actors[i].image}">`)
+                let actorImage = $(`<img src="assets/movies/${movie}/actors/${details.actors[i].image}.jpg" class="actors__image" alt="${details.actors[i].image}">`)
             
                 actorName.appendTo(actorCard)
                 actorImage.appendTo(actorCard)
@@ -241,7 +241,7 @@ function populateMoviePage(movie){
                 sceneCard.addClass("movie-scene");
             
                 let sceneName = $(`<span class="movie-scene__title">${details.scenes[i].name}</span>`)
-                let sceneImage = $(`<img src="/assets/movies/${movie}/scenes/${i}.jpg" class="movie-scene__image" alt="${i}">`)
+                let sceneImage = $(`<img src="assets/movies/${movie}/scenes/${i}.jpg" class="movie-scene__image" alt="${i}">`)
                 let sceneDescription = $(`<span class="movie-scene__description">${details.scenes[i].description}</span>`);
             
                 sceneName.appendTo(sceneCard);
@@ -290,7 +290,7 @@ function populateMoviePage(movie){
 
             document.title = "This is embarrassing!"
 
-            movieContainer.load("/assets/movies/error-not-found.html" , function(){
+            movieContainer.load("assets/movies/error-not-found.html" , function(){
                 $("#error-return").click(function(){
                    window.location.reload();
                 })
@@ -342,7 +342,7 @@ function closeMoviePage(){
     document.title = initialTitle
 
     search.val("")
-    closeSearch.attr("src" , "/assets/img/icons/search.svg");
+    closeSearch.attr("src" , "assets/img/icons/search.svg");
     closeSearch.removeAttr("style")
     $(".card").addClass("visible")
 
