@@ -1,0 +1,36 @@
+.error-not-found{
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--alternate);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s;
+    &__heading{
+        font-family: "Helvetica Bold";
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    &__sub{
+        font-size: 1.125rem;
+        line-height: 160%;
+    }
+    &__image{
+        margin: 50px 0;
+        width: 100%;
+        max-width: 800px;
+    }
+    &.fade-in{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

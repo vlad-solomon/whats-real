@@ -91,6 +91,7 @@ function fuzzySearch(){
 const movieContainer = $(".movie-page-container");
 const html = $("html");
 const body = $("body");
+const initialTitle = document.title
 
 $(".card").click(function(){
 
@@ -100,7 +101,7 @@ $(".card").click(function(){
     
     let movie = $(this).data("movie");
     openMoviePage(movie)
-    
+
 })
 
 let moviesArray = movieCards.map(({data}) => data)
@@ -122,7 +123,7 @@ function openMoviePage(movie){
     html.css("overflow" , "hidden");
     body.css("overflow" , "hidden");
     
-    movieContainer.load("/assets/movies/movie-template.html", function(){
+    movieContainer.load("assets/movies/movie-template.html", function(){
 
 
         // Get all the data fron the selected movie's JSON
@@ -146,9 +147,20 @@ function openMoviePage(movie){
             movieContainer.css("overflow-y" , "auto");
             $(".trailer").removeAttr("style")
 
-            let trailerSrc = $("iframe").attr("src");
-            $("iframe").attr("src" , "")
-            $("iframe").attr("src" , trailerSrc)
+            stopTrailer();
+
+            function stopTrailer(){
+                const iframes = $("iframe");
+                Array.prototype.forEach.call(iframes, iframe =>{
+                    iframe.contentWindow.postMessage(JSON.stringify({
+                        event: "command",
+                        func: "stopVideo",
+                    }),
+                    "*"
+                    );
+                })
+            }
+
         })
 
         if($(window).width() <= 1050){
@@ -165,16 +177,19 @@ function populateMoviePage(movie){
 
     $.ajax({ 
         type: 'GET', 
-        url: `/assets/movies/${movie}/${movie}.json`, 
+        url: `assets/movies/${movie}/${movie}.json`, 
         dataType: 'json',
+        timeout: 30000,
         success: function (details) {
+
+            document.title = `What's Real about ${details.title}?`
 
             let ratingWidth = parseInt($(".movie-details__rating").css("width"))
             let ratingScore = (details.rating * ratingWidth) / 10
 
-             $(".movie-details__score").css("width" , `${ratingScore}px`)
+            $(".movie-details__score").css("width" , `${ratingScore}px`)
 
-            let embedOptions = `?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&disablekb=1" frameborder="0"`
+            let embedOptions = `?enablejsapi=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&disablekb=1" frameborder="0"`
             $("iframe").attr("src" , `${details.trailer.link}${embedOptions}`)
             $(".trailer__title").text(`${details.trailer.title}`)
 
@@ -257,7 +272,7 @@ function populateMoviePage(movie){
         
             }
 
-            // Animte in the movie page
+            // Animate in the movie page
 
             setTimeout(function(){
                 $(".header").addClass("visible");
@@ -270,6 +285,22 @@ function populateMoviePage(movie){
                 movieContainer.css("overflow-y" , "auto");
             }, 2500)
             
+        },
+        error: function(){
+
+            document.title = "This is embarrassing!"
+
+            movieContainer.load("/assets/movies/error-not-found.html" , function(){
+                $("#error-return").click(function(){
+                   window.location.reload();
+                })
+                setTimeout(function(){
+                    $(".error-not-found").addClass("fade-in")
+                }, 500)
+            })
+            setTimeout(function(){
+                movieContainer.css("z-index" , "1")
+            }, 1500)
         }
 
     });
@@ -307,6 +338,8 @@ $(window).resize(function(){
 function closeMoviePage(){
 
     // Reset everything back to normal when the close button is clicked
+
+    document.title = initialTitle
 
     search.val("")
     closeSearch.attr("src" , "/assets/img/icons/search.svg");
