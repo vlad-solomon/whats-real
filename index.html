@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>What's Real?</title>
+		<title>What's Real?</title>
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#292929">
-   
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    
-</head>
-<body>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+		<link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#292929" />
 
-    <div class="movie-page-container"></div>
-    
-    <div class="page-content">
-        <img src="assets/img/logo.svg" class="hero__logo" alt="logo">
-        <div class="hero">
-            <div class="hero__column">
-                <h1 class="hero__heading">The best way to find out what part of your favourite movie is real</h1>
-                <span class="hero__blurb">Ever sat in front of the silver screen and thought to yourself that what you just saw couldn’t have happened?<br>What’s Real is here to help!</span>
-            </div>
-            <div class="hero__column">
-                <img src="assets/img/hero-img.svg" alt="hero-img" class="hero__image">
-            </div>
-        </div>
-        <div class="cards">
-            <div class="cards__input">
-                <div class="button button--search">
-                    <input type="text" placeholder="Search" id="movie-search">
-                    <img src="assets/img/icons/search.svg" alt="search" id="close-search">
-                </div>
-                <div class="button" id="random">
-                    Take me to a random movie
-                    <img src="assets/img/icons/random.svg" alt="random">
-                </div>
-            </div>
-            <div class="cards__grid">
-                <div class="not-found">
-                    <span class="card__title">Sorry!<br>We can't find that movie.</span>
-                    <img src="assets/img/notfound.png" alt="random">
-                </div>
-            </div>
-        </div>
-    </div>
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="theme-color" content="#ffffff" />
+	</head>
+	<body>
+		<div class="movie-page-container"></div>
 
-    <div class="footer">
-        <div class="footer__inner">
-            <div class="footer__group">
-                <img src="assets/img/logo-light.svg" alt="logo-light">
-                <span>All rights reserved 2020</span>
-            </div>
-            <div class="footer__group">
-                <span>Made possible with the help of</span>
-                <a href="https://www.historyvshollywood.com/" target="_blank">historyvshollywood.com</a>
-                <a href="https://www.informationisbeautiful.net/visualizations/based-on-a-true-true-story/" target="_blank">informationisbeautiful.net</a>
-                <a href="http://www.chasingthefrog.com/" target="_blank">chasingthefrog.com</a>
-                <a href="https://www.imdb.com/" target="_blank">imdb.com</a>
-            </div>
-            <div class="footer__group">
-                <span>Designed and created by</span>
-                <a href="#">Vlad Solomon</a>
-            </div>
-        </div>
-    </div>
+		<div class="page-content">
+			<img src="assets/img/logo.svg" class="hero__logo" alt="logo" />
+			<div class="hero">
+				<div class="hero__column">
+					<h1 class="hero__heading">The best way to find out what part of your favourite movie is real</h1>
+					<span class="hero__blurb">Ever sat in front of the silver screen and thought to yourself that what you just saw couldn’t have happened?<br />What’s Real is here to help!</span>
+				</div>
+				<div class="hero__column">
+					<img src="assets/img/hero-img.svg" alt="hero-img" class="hero__image" />
+				</div>
+			</div>
+			<div class="cards">
+				<div class="cards__input">
+					<div class="button button--search">
+						<input type="text" placeholder="Search" id="movie-search" />
+						<img src="assets/img/icons/search.svg" alt="search" id="close-search" />
+					</div>
+					<div class="button" id="random">
+						Take me to a random movie
+						<img src="assets/img/icons/random.svg" alt="random" />
+					</div>
+				</div>
+				<div class="cards__grid">
+					<div class="not-found">
+						<span class="card__title">Sorry!<br />We can't find that movie.</span>
+						<img src="assets/img/notfound.png" alt="random" />
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" async></script>
-    <script src="assets/js/movies.js"></script>
-    <script src="assets/js/app.js"></script>
-    
-</body>
+		<div class="footer">
+			<div class="footer__inner">
+				<div class="footer__group">
+					<img src="assets/img/logo-light.svg" alt="logo-light" />
+				</div>
+				<div class="footer__group">
+					<span>Made possible with the help of</span>
+					<a href="https://www.historyvshollywood.com/" target="_blank">historyvshollywood.com</a>
+					<a href="https://www.informationisbeautiful.net/visualizations/based-on-a-true-true-story/" target="_blank">informationisbeautiful.net</a>
+					<a href="http://www.chasingthefrog.com/" target="_blank">chasingthefrog.com</a>
+					<a href="https://www.imdb.com/" target="_blank">imdb.com</a>
+				</div>
+				<div class="footer__group">
+					<span>Designed and developed by</span>
+					<a href="https://vlad-solomon.github.io/" target="_blank">Vlad Solomon</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" async></script>
+		<script src="assets/js/movies.js"></script>
+		<script src="assets/js/app.js"></script>
+	</body>
 </html>

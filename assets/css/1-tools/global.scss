@@ -1,31 +1,37 @@
-:root{
-    font-size: 16px;
-    font-family: "Helvetica Light";
-    color: var(--accent);
+:root {
+	font-size: 16px;
+	font-family: "Helvetica Light";
+	color: var(--accent);
 }
 
 html,
-body{
-    overflow-x: hidden;
+body {
+	overflow-x: hidden;
 }
 
-.page-content{
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-.fade-in{
-    transition: 1s;
-    opacity: 1;
-    pointer-events: none;
+.page-content {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.fade-out{
-    transition: 1s;
-    opacity: 0;
-    pointer-events: none;
+.fade-in {
+	transition: 1s;
+	opacity: 1;
+	pointer-events: none;
 }
 
-::selection{
-    background-color: rgba(0,0,0,0.1) 
+.fade-out {
+	transition: 1s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+::selection {
+	background-color: rgba(0, 0, 0, 0.1);
 }

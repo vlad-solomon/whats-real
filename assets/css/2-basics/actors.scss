@@ -16,7 +16,7 @@
             grid-column: 2;
         }
         &::before{
-            content: url("/assets/img/gradient.png");
+            content: url("../img/gradient.png");
             position: absolute;
             bottom: 0;
             left: 0;
